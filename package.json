@@ -33,7 +33,6 @@
     "react-apexcharts": "^1.4.0",
     "react-dom": "^18.2.0",
     "react-icons": "^4.8.0",
-    "styled-components": "^5.3.10",
     "tailwind-merge": "^1.12.0"
   },
   "devDependencies": {
@@ -45,7 +44,6 @@
     "@types/lodash": "^4.14.194",
     "@types/numeral": "^2.0.2",
     "@types/react": "^18.0.35",
-    "@types/styled-components": "^5.1.26",
     "@typescript-eslint/eslint-plugin": "^5.58.0",
     "@typescript-eslint/parser": "^5.58.0",
     "autoprefixer": "^10.4.14",
@@ -65,14 +63,7 @@
     "prettier": "^2.8.7",
     "prettier-plugin-tailwindcss": "^0.1.13",
     "tailwindcss": "^3.3.2",
-    "twin.macro": "^3.3.1",
     "typescript": "^4.9.5"
-  },
-  "babelMacros": {
-    "twin": {
-      "config": "./tailwind.config.ts",
-      "preset": "styled-components"
-    }
   },
   "lint-staged": {
     "**/*.{js,jsx,ts,tsx}": [
