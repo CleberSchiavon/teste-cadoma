@@ -8,7 +8,7 @@ interface IDashboardWidget {
   title: string;
   total: number;
   sx?: object;
-  Icon: OverridableComponent<SvgIconTypeMap<'svg'>> & {
+  Icon: OverridableComponent<SvgIconTypeMap> & {
     muiName: string;
   };
   color?: string;

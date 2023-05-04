@@ -9,15 +9,14 @@ import NextImage from '@/components/NextImage';
 import Seo from '@/components/Seo';
 
 import LogoCadoma from '@/../public/images/logo_cadoma.png';
-
-import { FormInputsContainer, MainForgetContainer } from './styled';
+import { FormInputsContainer } from '@/components/inputs/styled';
 
 export default function ForgetPage() {
   const router = useRouter();
   return (
     <Layout>
       <Seo templateTitle='Esqueci minha senha' />
-      <MainForgetContainer>
+      <main>
         <section className='bg-gray-50 dark:bg-gray-900'>
           <div className='mx-auto flex flex-col items-center justify-center px-6 py-8 md:h-screen lg:py-0'>
             <NextImage
@@ -70,7 +69,7 @@ export default function ForgetPage() {
             </div>
           </div>
         </section>
-      </MainForgetContainer>
+      </main>
     </Layout>
   );
 }

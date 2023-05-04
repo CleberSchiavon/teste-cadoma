@@ -10,14 +10,13 @@ import NextImage from '@/components/NextImage';
 import Seo from '@/components/Seo';
 
 import LogoCadoma from '@/../public/images/logo_cadoma.png';
-
-import { FormInputsContainer, MainLoginContainer } from './styled';
+import { FormInputsContainer } from '@/components/inputs/styled';
 
 export default function LoginPage() {
   return (
     <Layout>
       <Seo templateTitle='Login' />
-      <MainLoginContainer>
+      <main>
         <section className='bg-gray-50 dark:bg-gray-900'>
           <div className='mx-auto flex flex-col items-center justify-center px-6 py-8 md:h-screen lg:py-0'>
             <NextImage
@@ -84,7 +83,7 @@ export default function LoginPage() {
             </div>
           </div>
         </section>
-      </MainLoginContainer>
+      </main>
     </Layout>
   );
 }

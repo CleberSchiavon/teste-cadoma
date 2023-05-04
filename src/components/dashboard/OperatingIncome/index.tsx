@@ -65,6 +65,7 @@ export default function OperatingIncome({
         <Chart
           type='pie'
           series={chartSeries}
+          // @ts-expect-error esse erro de typescript é esperado pois os types do apexcharts ainda não foram atualizados
           options={chartOptions}
           height={280}
         />

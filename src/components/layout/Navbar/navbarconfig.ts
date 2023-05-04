@@ -15,52 +15,52 @@ const navConfig = [
   {
     title: 'Lotes',
     path: '/lots',
-    icon: GridView,
+    Icon: GridView,
   },
   {
     title: 'Ciclos',
     path: '/app/cicles',
-    icon: Dashboard,
+    Icon: Dashboard,
   },
   {
     title: 'Finalizados',
     path: '/app/finished',
-    icon: CalendarMonth,
+    Icon: CalendarMonth,
   },
   {
     title: 'Notificações',
     path: '/app/notifications',
-    icon: Notifications,
+    Icon: Notifications,
   },
   {
     title: 'Lançamentos',
     path: '/app/releases',
-    icon: NoteAlt,
+    Icon: NoteAlt,
   },
   {
     title: 'Relatórios',
     path: '/app/reports',
-    icon: Equalizer,
+    Icon: Equalizer,
   },
   {
     title: 'Visão',
     path: '/app/visao-geral',
-    icon: RemoveRedEye,
+    Icon: RemoveRedEye,
   },
   {
     title: 'Cadastros',
     path: '/app/users',
-    icon: EditNote,
+    Icon: EditNote,
   },
   {
     title: 'Suporte Cadoma',
     path: '/app/suport',
-    icon: Construction,
+    Icon: Construction,
   },
   {
     title: 'Sair',
     path: '/404',
-    icon: ExitToApp,
+    Icon: ExitToApp,
   },
 ];
 

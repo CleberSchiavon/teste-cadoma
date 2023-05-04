@@ -56,6 +56,7 @@ export default function SilLevel({
         <Chart
           type='bar'
           series={[{ data: chartSeries }]}
+          // @ts-expect-error esse erro de typescript é esperado pois os types do apexcharts ainda não foram atualizados
           options={chartOptions}
           height={364}
         />

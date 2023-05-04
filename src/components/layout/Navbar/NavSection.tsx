@@ -1,4 +1,4 @@
-import { Box, List, ListItemText } from '@mui/material';
+import { Box, List, ListItemText, SxProps, Theme } from '@mui/material';
 import { useRouter } from 'next/router';
 
 import { StyledNavItem } from './styled';
@@ -10,8 +10,7 @@ interface INavSection {
 interface INavItem {
   title: string;
   path: string;
-  icon: React.ReactNode;
-  info: string;
+  Icon: React.ElementType<{ sx: SxProps<Theme> }>;
 }
 
 export default function NavSection({ data = [], ...other }: INavSection) {
@@ -23,8 +22,7 @@ export default function NavSection({ data = [], ...other }: INavSection) {
             key={item.title}
             title={item.title}
             path={item.path}
-            icon={item.icon}
-            info={item.info}
+            Icon={item.Icon}
           />
         ))}
       </List>
@@ -32,9 +30,8 @@ export default function NavSection({ data = [], ...other }: INavSection) {
   );
 }
 
-function NavItem({ title, path, icon, info }: INavItem) {
+function NavItem({ title, path, Icon }: INavItem) {
   const router = useRouter();
-  const Icon = icon;
   return (
     <StyledNavItem
       sx={{
@@ -58,8 +55,6 @@ function NavItem({ title, path, icon, info }: INavItem) {
       />
 
       <ListItemText disableTypography primary={title} />
-
-      {info && info}
     </StyledNavItem>
   );
 }
