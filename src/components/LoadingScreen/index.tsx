@@ -1,4 +1,4 @@
-import { Box, Container, Typography } from '@mui/material';
+import { Typography } from '@mui/material';
 import React from 'react';
 import fishLoading from '@/lottiefiles/fishLoading.json';
 import Lottie from 'react-lottie';
