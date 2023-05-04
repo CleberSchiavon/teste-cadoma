@@ -28,7 +28,12 @@ export default function LoginPage() {
             />
             <div className='w-full rounded-lg bg-white shadow dark:border dark:border-gray-700 dark:bg-gray-800 sm:max-w-md md:mt-0 xl:p-0'>
               <div className='space-y-4 p-6 sm:p-8 md:space-y-6'>
-                <Typography variant='h5' color='white' fontWeight='bold'>
+                <Typography
+                  variant='h5'
+                  color='white'
+                  fontWeight='500'
+                  className='text-black dark:text-white'
+                >
                   Entrar na sua conta
                 </Typography>
                 <form className='space-y-4 md:space-y-6' action='#'>
