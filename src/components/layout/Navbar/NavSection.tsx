@@ -35,6 +35,7 @@ function NavItem({ title, path, Icon }: INavItem) {
   return (
     <StyledNavItem
       sx={{
+        gap: 2,
         '&.active': {
           color: 'text.primary',
           bgcolor: 'action.selected',

@@ -1,5 +1,13 @@
-import { Avatar, Box, Drawer, Link, Typography } from '@mui/material';
+import {
+  Avatar,
+  Box,
+  Drawer,
+  IconButton,
+  Link,
+  Typography,
+} from '@mui/material';
 
+import { Menu } from '@mui/icons-material/';
 import useResponsive from '@/hooks/useResponsive';
 
 import NextImage from '@/components/NextImage';
@@ -26,13 +34,22 @@ export default function Navbar({ openNav, onCloseNav }: INavbar) {
 
   const renderContent = (
     <>
+      <IconButton
+        onClick={onCloseNav}
+        sx={{
+          mr: 1,
+          color: 'text.primary',
+        }}
+      >
+        <Menu />
+      </IconButton>
       <NextImage
         src={LogoCadoma}
         alt='Logo da Cadoma'
         width={250}
         height={120}
       />
-      <Box sx={{ mb: 5 }}>
+      <Box>
         <Link underline='none'>
           <StyledAccount>
             <Avatar src='/public/images/profilePhoto.png' alt='Cleber' />
@@ -66,7 +83,6 @@ export default function Navbar({ openNav, onCloseNav }: INavbar) {
         <Drawer
           open={openNav}
           onClose={onCloseNav}
-          variant='permanent'
           PaperProps={{
             sx: {
               width: NAV_WIDTH,
@@ -81,9 +97,6 @@ export default function Navbar({ openNav, onCloseNav }: INavbar) {
         <Drawer
           open={openNav}
           onClose={onCloseNav}
-          ModalProps={{
-            keepMounted: true,
-          }}
           PaperProps={{
             sx: { width: NAV_WIDTH },
           }}

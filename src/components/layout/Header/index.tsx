@@ -20,22 +20,21 @@ export default function Header({ onOpenNav }: IHeader) {
   return (
     <StyledRoot>
       <StyledToolbar>
+        <IconButton
+          onClick={onOpenNav}
+          sx={{
+            mr: 1,
+            color: 'text.primary',
+          }}
+        >
+          <Menu />
+        </IconButton>
         <NextImage
           src={LogoCadoma}
           alt='Logo da Cadoma'
           width={250}
           height={120}
         />
-        <IconButton
-          onClick={onOpenNav}
-          sx={{
-            mr: 1,
-            color: 'text.primary',
-            display: { lg: 'none' },
-          }}
-        >
-          <Menu />
-        </IconButton>
         <Box sx={{ flexGrow: 1 }} />
 
         <Stack
