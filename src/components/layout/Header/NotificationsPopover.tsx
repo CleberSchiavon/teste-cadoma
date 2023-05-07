@@ -1,13 +1,5 @@
 // components
-import {
-  AccessTime,
-  Battery0Bar,
-  DeviceThermostat,
-  DoneAll,
-  Notifications,
-  PointOfSale,
-  SyncDisabled,
-} from '@mui/icons-material';
+import { AccessTime, DoneAll, Notifications } from '@mui/icons-material';
 // @mui
 import {
   Avatar,
@@ -33,16 +25,19 @@ import { userNotifications } from '@/data/userNotifications';
 import { fToNow } from '@/utils/formatTimes';
 
 import { Notification, NotificationItem } from '@/types/Notification';
+import defineNotificationContent from '@/utils/notifications/defineNotificationContent';
+import { useRouter } from 'next/router';
 
 export default function NotificationsPopover() {
   const [notifications, setNotifications] = useState(userNotifications);
+
+  const [open, setOpen] = useState(null);
 
   const totalUnRead = notifications.filter(
     (item: Notification) => item.isUnread === true
   ).length;
 
-  const [open, setOpen] = useState(null);
-
+  const router = useRouter();
   // eslint-disable-next-line @typescript-eslint/no-explicit-any
   const handleOpen = (event: any) => {
     setOpen(event.currentTarget);
@@ -146,7 +141,11 @@ export default function NotificationsPopover() {
         <Divider sx={{ borderStyle: 'dashed' }} />
 
         <Box sx={{ p: 1 }}>
-          <Button fullWidth disableRipple>
+          <Button
+            fullWidth
+            disableRipple
+            onClick={() => router.push('/notifications')}
+          >
             Ver todas as notificações
           </Button>
         </Box>
@@ -156,7 +155,7 @@ export default function NotificationsPopover() {
 }
 
 function NotificationItem({ notification }: NotificationItem) {
-  const { avatar, title } = renderContent(notification);
+  const { avatar, title } = defineNotificationContent(notification);
 
   return (
     <ListItemButton
@@ -191,50 +190,4 @@ function NotificationItem({ notification }: NotificationItem) {
       />
     </ListItemButton>
   );
-}
-
-// ----------------------------------------------------------------------
-
-function renderContent(notification: Notification) {
-  const title = (
-    <Typography variant='subtitle2'>
-      {notification.title}
-      <Typography
-        component='span'
-        variant='body2'
-        sx={{ color: 'text.secondary', textTransform: 'none' }}
-      >
-        &nbsp; {notification.type}
-      </Typography>
-    </Typography>
-  );
-
-  if (notification.type === 'Alimentador') {
-    return {
-      avatar: <PointOfSale />,
-      title,
-    };
-  }
-  if (notification.type === 'Bateria Fraca') {
-    return {
-      avatar: <Battery0Bar />,
-      title,
-    };
-  }
-  if (notification.type === 'Termometro desconectado') {
-    return {
-      avatar: <DeviceThermostat />,
-      title,
-    };
-  }
-  if (notification.type === 'Motor desligado') {
-    return {
-      avatar: <SyncDisabled />,
-      title,
-    };
-  }
-  return {
-    avatar: null,
-    title: title,
-  };
 }

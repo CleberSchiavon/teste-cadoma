@@ -1,7 +1,6 @@
 export type Notification = {
   id: number;
   type: string;
-  image: string;
   createdAt: number;
   title: string;
   isUnread: boolean;

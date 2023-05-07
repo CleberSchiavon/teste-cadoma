@@ -1,22 +1,9 @@
 import { KeyboardArrowRight } from '@mui/icons-material';
-import {
-  Box,
-  Button,
-  Card,
-  CardHeader,
-  Divider,
-  Link,
-  Stack,
-  Typography,
-} from '@mui/material';
+import { Box, Button, Card, CardHeader, Divider, Stack } from '@mui/material';
+import NotificationItem from '@/components/dashboard/NotificationItem';
 
-import { fToNow } from '@/utils/formatTimes';
-
-import {
-  IDashboardNotification,
-  Notification,
-  NotificationItem,
-} from '@/types/Notification';
+import { IDashboardNotification, Notification } from '@/types/Notification';
+import { useRouter } from 'next/router';
 
 export default function DashboardNotifications({
   title,
@@ -24,6 +11,7 @@ export default function DashboardNotifications({
   list,
   ...other
 }: IDashboardNotification) {
+  const router = useRouter();
   return (
     <Card {...other}>
       <CardHeader title={title} subheader={subheader} />
@@ -37,42 +25,15 @@ export default function DashboardNotifications({
       <Divider />
 
       <Box sx={{ p: 2, textAlign: 'right' }}>
-        <Button size='small' color='inherit' endIcon={<KeyboardArrowRight />}>
+        <Button
+          size='small'
+          color='inherit'
+          endIcon={<KeyboardArrowRight />}
+          onClick={() => router.push('/notifications')}
+        >
           Ver todas as notificações
         </Button>
       </Box>
     </Card>
-  );
-}
-
-function NotificationItem({ notification }: NotificationItem) {
-  const { image, title, type, createdAt } = notification;
-
-  return (
-    <Stack direction='row' alignItems='center' spacing={2}>
-      <Box
-        component='img'
-        alt={title}
-        src={image}
-        sx={{ width: 48, height: 48, borderRadius: 1.5, flexShrink: 0 }}
-      />
-
-      <Box sx={{ minWidth: 240, flexGrow: 1 }}>
-        <Link color='inherit' variant='subtitle2' underline='hover' noWrap>
-          {title}
-        </Link>
-
-        <Typography variant='body2' sx={{ color: 'text.secondary' }} noWrap>
-          {type}
-        </Typography>
-      </Box>
-
-      <Typography
-        variant='caption'
-        sx={{ pr: 3, flexShrink: 0, color: 'text.secondary' }}
-      >
-        {fToNow(createdAt)}
-      </Typography>
-    </Stack>
   );
 }
