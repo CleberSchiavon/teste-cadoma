@@ -11,12 +11,14 @@ import AccountPopover from './AccountPopover';
 import NotificationsPopover from './NotificationsPopover';
 //
 import { StyledRoot, StyledToolbar } from './styled';
+import { useRouter } from 'next/router';
 
 interface IHeader {
   onOpenNav: () => void;
 }
 
 export default function Header({ onOpenNav }: IHeader) {
+  const router = useRouter();
   return (
     <StyledRoot>
       <StyledToolbar>
@@ -34,6 +36,8 @@ export default function Header({ onOpenNav }: IHeader) {
           alt='Logo da Cadoma'
           width={250}
           height={120}
+          onClick={() => router.push('/app')}
+          className='cursor-pointer'
         />
         <Box sx={{ flexGrow: 1 }} />
 

@@ -8,7 +8,7 @@ export default function DashboardLayout({
 }: {
   children: React.ReactNode;
 }) {
-  const [navOpen, setNavOpen] = useState(true);
+  const [navOpen, setNavOpen] = useState(false);
   const onOpenNav = () => setNavOpen(true);
   const onCloseNav = () => setNavOpen(false);
   return (
