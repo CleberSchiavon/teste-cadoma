@@ -10,6 +10,7 @@ import {
 } from '@mui/material';
 // @mui
 import { alpha } from '@mui/material/styles';
+import { useRouter } from 'next/router';
 import { useState } from 'react';
 
 // mocks_
@@ -19,9 +20,11 @@ import { useState } from 'react';
 const MENU_OPTIONS = [
   {
     label: 'Página Inicial',
+    route: '/app',
   },
   {
-    label: 'Empresas',
+    label: 'Instâncias',
+    route: '/instances',
   },
 ];
 
@@ -30,6 +33,8 @@ const MENU_OPTIONS = [
 export default function AccountPopover() {
   const [open, setOpen] = useState(null);
 
+  const router = useRouter();
+
   // eslint-disable-next-line @typescript-eslint/no-explicit-any
   const handleOpen = (event: any) => {
     setOpen(event.currentTarget);
@@ -37,6 +42,10 @@ export default function AccountPopover() {
 
   const handleClose = () => {
     setOpen(null);
+  };
+
+  const handleClickMenuItem = (route: string) => {
+    router.push(route);
   };
 
   return (
@@ -95,7 +104,10 @@ export default function AccountPopover() {
 
         <Stack sx={{ p: 1 }}>
           {MENU_OPTIONS.map((option) => (
-            <MenuItem key={option.label} onClick={handleClose}>
+            <MenuItem
+              key={option.label}
+              onClick={() => handleClickMenuItem(option.route)}
+            >
               {option.label}
             </MenuItem>
           ))}
