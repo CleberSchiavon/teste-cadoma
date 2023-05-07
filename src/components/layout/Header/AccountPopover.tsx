@@ -1,4 +1,4 @@
-import VirtualizedList from '@/components/layout/Header/InstancesList';
+import { KeyboardArrowDown, KeyboardArrowUp } from '@mui/icons-material';
 import {
   Avatar,
   Box,
@@ -9,12 +9,11 @@ import {
   Stack,
   Typography,
 } from '@mui/material';
-// @mui
 import { alpha } from '@mui/material/styles';
 import { useRouter } from 'next/router';
 import { useState } from 'react';
 
-import { KeyboardArrowDown, KeyboardArrowUp } from '@mui/icons-material';
+import VirtualizedList from '@/components/layout/Header/InstancesList';
 const MENU_OPTIONS = [
   {
     label: 'Página Inicial',

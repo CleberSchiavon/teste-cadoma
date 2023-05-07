@@ -1,14 +1,15 @@
 import { ThemeProvider } from '@mui/material';
 import { AppProps } from 'next/app';
-
-import '@/styles/globals.css';
-
-import { theme } from '@/styles/theme';
 import { useEffect, useState } from 'react';
 import React from 'react';
-import LoadingScreen from '@/components/LoadingScreen';
 import { ToastContainer } from 'react-toastify';
+
+import '@/styles/globals.css';
 import 'react-toastify/dist/ReactToastify.css';
+
+import LoadingScreen from '@/components/LoadingScreen';
+
+import { theme } from '@/styles/theme';
 
 function MyApp({ Component, pageProps }: AppProps) {
   const [loading, setLoading] = useState(true);

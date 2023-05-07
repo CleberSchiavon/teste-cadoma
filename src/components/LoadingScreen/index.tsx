@@ -1,7 +1,8 @@
 import { Typography } from '@mui/material';
 import React from 'react';
-import fishLoading from '@/lottiefiles/fishLoading.json';
 import Lottie from 'react-lottie';
+
+import fishLoading from '@/lottiefiles/fishLoading.json';
 
 export default function LoadingScreen() {
   const lottieOptions = {

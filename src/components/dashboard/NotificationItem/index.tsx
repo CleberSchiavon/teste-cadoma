@@ -1,5 +1,3 @@
-import React, { useState } from 'react';
-import { fToNow } from '@/utils/formatTimes';
 import {
   Avatar,
   Box,
@@ -9,10 +7,15 @@ import {
   Stack,
   Typography,
 } from '@mui/material';
-import { NotificationItem } from '@/types/Notification';
+import React, { useState } from 'react';
 import { toast } from 'react-toastify';
-import defineNotificationContent from '@/utils/notifications/defineNotificationContent';
+
 import DialogTextModal from '@/components/modal/DialogTextModal';
+
+import { fToNow } from '@/utils/formatTimes';
+import defineNotificationContent from '@/utils/notifications/defineNotificationContent';
+
+import { NotificationItem } from '@/types/Notification';
 
 export default function NotificationItem({ notification }: NotificationItem) {
   const [modalOpen, setModalOpen] = useState(false);

@@ -1,4 +1,3 @@
-import * as React from 'react';
 import {
   Box,
   List,
@@ -6,8 +5,11 @@ import {
   ListItemButton,
   ListItemText,
 } from '@mui/material/';
-import { instanceData } from '@/data/instances';
+import * as React from 'react';
+
 import logger from '@/lib/logger';
+
+import { instanceData } from '@/data/instances';
 
 interface IInstance {
   instanceName: string;

@@ -1,17 +1,14 @@
-// components
 import { Menu } from '@mui/icons-material/';
 import { Box, IconButton, Stack } from '@mui/material';
+import { useRouter } from 'next/router';
 
 import NextImage from '@/components/NextImage';
 
 import LogoCadoma from '@/../public/images/logo_cadoma.png';
 
-// @mui
 import AccountPopover from './AccountPopover';
 import NotificationsPopover from './NotificationsPopover';
-//
 import { StyledRoot, StyledToolbar } from './styled';
-import { useRouter } from 'next/router';
 
 interface IHeader {
   onOpenNav: () => void;

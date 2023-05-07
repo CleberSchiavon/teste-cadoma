@@ -5,6 +5,7 @@ import {
   SyncDisabled,
 } from '@mui/icons-material';
 import { Typography } from '@mui/material';
+
 import { Notification } from '@/types/Notification';
 
 export default function defineNotificationContent(notification: Notification) {

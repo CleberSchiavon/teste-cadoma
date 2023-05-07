@@ -1,9 +1,10 @@
 import { KeyboardArrowRight } from '@mui/icons-material';
 import { Box, Button, Card, CardHeader, Divider, Stack } from '@mui/material';
+import { useRouter } from 'next/router';
+
 import NotificationItem from '@/components/dashboard/NotificationItem';
 
 import { IDashboardNotification, Notification } from '@/types/Notification';
-import { useRouter } from 'next/router';
 
 export default function DashboardNotifications({
   title,

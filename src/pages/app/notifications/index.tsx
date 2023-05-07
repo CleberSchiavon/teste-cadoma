@@ -1,11 +1,13 @@
-import * as React from 'react';
-import Seo from '@/components/Seo';
-import DashboardLayout from '@/components/layout/DashboardLayout';
 import { Alert, AlertTitle, Stack, Typography } from '@mui/material';
+import * as React from 'react';
 
 import { userNotifications } from '@/data/userNotifications';
-import { Notification } from '@/types/Notification';
+
 import NotificationItem from '@/components/dashboard/NotificationItem';
+import DashboardLayout from '@/components/layout/DashboardLayout';
+import Seo from '@/components/Seo';
+
+import { Notification } from '@/types/Notification';
 
 export default function NotificationsPage() {
   return (

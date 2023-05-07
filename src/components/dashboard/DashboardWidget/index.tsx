@@ -1,7 +1,6 @@
 import { Card, SvgIconTypeMap, Theme, Typography } from '@mui/material';
 import { OverridableComponent } from '@mui/material/OverridableComponent';
 
-// utils
 import { StyledIcon } from './styled';
 
 interface IDashboardWidget {

@@ -1,6 +1,4 @@
-// components
 import { AccessTime, DoneAll, Notifications } from '@mui/icons-material';
-// @mui
 import {
   Avatar,
   Badge,
@@ -17,16 +15,15 @@ import {
   Tooltip,
   Typography,
 } from '@mui/material';
+import { useRouter } from 'next/router';
 import { useState } from 'react';
 
 import { userNotifications } from '@/data/userNotifications';
 
-// utils
 import { fToNow } from '@/utils/formatTimes';
+import defineNotificationContent from '@/utils/notifications/defineNotificationContent';
 
 import { Notification, NotificationItem } from '@/types/Notification';
-import defineNotificationContent from '@/utils/notifications/defineNotificationContent';
-import { useRouter } from 'next/router';
 
 export default function NotificationsPopover() {
   const [notifications, setNotifications] = useState(userNotifications);

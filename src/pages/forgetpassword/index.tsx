@@ -4,12 +4,12 @@ import * as React from 'react';
 
 import TextButton from '@/components/buttons/TextButton';
 import OutlinedInput from '@/components/inputs/input';
+import { FormInputsContainer } from '@/components/inputs/styled';
 import Layout from '@/components/layout/Layout';
 import NextImage from '@/components/NextImage';
 import Seo from '@/components/Seo';
 
 import LogoCadoma from '@/../public/images/logo_cadoma.png';
-import { FormInputsContainer } from '@/components/inputs/styled';
 
 export default function ForgetPage() {
   const router = useRouter();

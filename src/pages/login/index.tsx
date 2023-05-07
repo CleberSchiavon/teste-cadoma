@@ -1,18 +1,18 @@
-import React from 'react';
+import { Typography } from '@mui/material';
 import Link from 'next/link';
+import { useRouter } from 'next/router';
+import React from 'react';
+import { useForm } from 'react-hook-form';
 
 import TextButton from '@/components/buttons/TextButton';
 import Checkbox from '@/components/inputs/Checkbox';
 import OutlinedInput from '@/components/inputs/input';
+import { FormInputsContainer } from '@/components/inputs/styled';
 import Layout from '@/components/layout/Layout';
 import NextImage from '@/components/NextImage';
 import Seo from '@/components/Seo';
 
 import LogoCadoma from '@/../public/images/logo_cadoma.png';
-import { Typography } from '@mui/material';
-import { FormInputsContainer } from '@/components/inputs/styled';
-import { useForm } from 'react-hook-form';
-import { useRouter } from 'next/router';
 
 export default function LoginPage() {
   const router = useRouter();

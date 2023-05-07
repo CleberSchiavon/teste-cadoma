@@ -1,3 +1,4 @@
+import { Menu } from '@mui/icons-material/';
 import {
   Avatar,
   Box,
@@ -7,7 +8,6 @@ import {
   Typography,
 } from '@mui/material';
 
-import { Menu } from '@mui/icons-material/';
 import useResponsive from '@/hooks/useResponsive';
 
 import NextImage from '@/components/NextImage';

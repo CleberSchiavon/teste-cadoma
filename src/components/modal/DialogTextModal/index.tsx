@@ -1,7 +1,8 @@
-import React, { useState } from 'react';
-import Typography from '@mui/material/Typography';
-import Modal from '@mui/material/Modal';
 import { Button, TextField } from '@mui/material';
+import Modal from '@mui/material/Modal';
+import Typography from '@mui/material/Typography';
+import React, { useState } from 'react';
+
 import {
   ModalButtons,
   ModalContainer,
