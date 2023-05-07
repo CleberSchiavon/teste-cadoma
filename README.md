@@ -1,9 +1,5 @@
 # Teste Cadoma
 
-Usei de base o boilerplate do Theodorus clarence
-
-- [One-stop Starter to Maximize Efficiency on Next.js & Tailwind CSS Projects](https://theodorusclarence.com/blog/one-stop-starter)
-
 ## Features
 
 Esse repositório contém
@@ -56,4 +52,22 @@ Com ele é fácil de adicionar novas dependêncais pra dentro desse projeto com 
 
 https://user-images.githubusercontent.com/55318172/146631994-e1cac137-1664-4cfe-950b-a96decc1eaa6.mp4
 
-Link abaixo [expansion pack repository](https://github.com/theodorusclarence/expansion-pack) com os comandos
+[Link](https://github.com/theodorusclarence/expansion-pack) com os comandos
+
+## Snippets
+
+Esse projeto contém alguns snippets pré configurados do VSCODE também :D
+
+A configuração deles esta na pasta
+
+```bash
+./vscode/typescriptreact.code-snippets
+```
+
+## Inspirações
+
+Usei de base o boilerplate do Theodorus Clarence pra toda a enviroment do projeto!!
+
+Segue o link:
+
+- [One-stop Starter to Maximize Efficiency on Next.js & Tailwind CSS Projects](https://theodorusclarence.com/blog/one-stop-starter)

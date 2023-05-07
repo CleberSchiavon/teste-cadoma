@@ -79,7 +79,7 @@
   //#endregion  //*======== Commons ===========
 
   //#region  //*=========== Next.js ===========
-  "Next Pages": {
+  "Next Normal Page": {
     "prefix": "np",
     "body": [
       "import * as React from 'react';\n",
@@ -97,6 +97,28 @@
       "        </section>",
       "      </main>",
       "    </Layout>",
+      "  )",
+      "}"
+    ]
+  },
+  "Next Dashboard Page": {
+    "prefix": "ndp",
+    "body": [
+      "import * as React from 'react';\n",
+      "import DashboardLayout from '@/components/layout/DashboardLayout';",
+      "import Seo from '@/components/Seo';\n",
+      "export default function ${1:${TM_FILENAME_BASE/(^[a-zA-Z])(.*)/${1:/upcase}${2}/}}Page() {",
+      "  return (",
+      "    <DashboardLayout>",
+      "      <Seo templateTitle='${1:${TM_FILENAME_BASE/(^[a-zA-Z])(.*)/${1:/upcase}${2}/}}' />\n",
+      "      <main>\n",
+      "        <section className=''>",
+      "          <div className='layout py-20 min-h-screen'>",
+      "            $0",
+      "          </div>",
+      "        </section>",
+      "      </main>",
+      "    </DashboardLayout>",
       "  )",
       "}"
     ]

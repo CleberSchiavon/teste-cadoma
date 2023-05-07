@@ -1,7 +1,7 @@
 {
   "name": "App Cadoma",
   "short_name": "Cadoma",
-  "theme_color": "#ffffff",
-  "background_color": "#ffffff",
+  "theme_color": "#ef4444",
+  "background_color": "#7f1d1d",
   "display": "standalone"
 }
