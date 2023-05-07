@@ -1,6 +1,5 @@
-import { Typography } from '@mui/material';
+import React from 'react';
 import Link from 'next/link';
-import * as React from 'react';
 
 import TextButton from '@/components/buttons/TextButton';
 import Checkbox from '@/components/inputs/Checkbox';
@@ -10,9 +9,18 @@ import NextImage from '@/components/NextImage';
 import Seo from '@/components/Seo';
 
 import LogoCadoma from '@/../public/images/logo_cadoma.png';
+import { Typography } from '@mui/material';
 import { FormInputsContainer } from '@/components/inputs/styled';
+import { useForm } from 'react-hook-form';
+import { useRouter } from 'next/router';
 
 export default function LoginPage() {
+  const router = useRouter();
+  const { handleSubmit } = useForm();
+
+  const handleLogin = () => {
+    router.push('/app');
+  };
   return (
     <Layout>
       <Seo templateTitle='Login' />
@@ -36,7 +44,11 @@ export default function LoginPage() {
                 >
                   Entrar na sua conta
                 </Typography>
-                <form className='space-y-4 md:space-y-6' action='#'>
+                <form
+                  className='space-y-4 md:space-y-6'
+                  action='#'
+                  onSubmit={handleSubmit(handleLogin)}
+                >
                   <FormInputsContainer>
                     <OutlinedInput
                       name='instance'
