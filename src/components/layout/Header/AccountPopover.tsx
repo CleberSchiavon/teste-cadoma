@@ -1,3 +1,4 @@
+import VirtualizedList from '@/components/layout/Header/InstancesList';
 import {
   Avatar,
   Box,
@@ -13,25 +14,17 @@ import { alpha } from '@mui/material/styles';
 import { useRouter } from 'next/router';
 import { useState } from 'react';
 
-// mocks_
-
-// ----------------------------------------------------------------------
-
+import { KeyboardArrowDown, KeyboardArrowUp } from '@mui/icons-material';
 const MENU_OPTIONS = [
   {
     label: 'Página Inicial',
     route: '/app',
   },
-  {
-    label: 'Instâncias',
-    route: '/app/instances',
-  },
 ];
-
-// ----------------------------------------------------------------------
 
 export default function AccountPopover() {
   const [open, setOpen] = useState(null);
+  const [userInstancesOpen, setUserInstancesOpen] = useState(false);
 
   const router = useRouter();
 
@@ -48,6 +41,13 @@ export default function AccountPopover() {
     router.push(route);
   };
 
+  const handleInstancesOpen = () => {
+    if (userInstancesOpen === false) {
+      setUserInstancesOpen(true);
+    } else {
+      setUserInstancesOpen(false);
+    }
+  };
   return (
     <>
       <IconButton
@@ -83,7 +83,7 @@ export default function AccountPopover() {
             p: 0,
             mt: 1.5,
             ml: 0.75,
-            width: 180,
+            width: 300,
             '& .MuiMenuItem-root': {
               typography: 'body2',
               borderRadius: 0.75,
@@ -100,8 +100,15 @@ export default function AccountPopover() {
           </Typography>
         </Box>
 
-        <Divider sx={{ borderStyle: 'dashed' }} />
+        <Stack sx={{ p: 1 }}>
+          <MenuItem onClick={handleInstancesOpen}>
+            Instâncias
+            {userInstancesOpen ? <KeyboardArrowUp /> : <KeyboardArrowDown />}
+          </MenuItem>
+          {userInstancesOpen && <VirtualizedList />}
+        </Stack>
 
+        <Divider sx={{ borderStyle: 'dashed' }} />
         <Stack sx={{ p: 1 }}>
           {MENU_OPTIONS.map((option) => (
             <MenuItem
