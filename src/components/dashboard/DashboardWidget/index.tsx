@@ -26,7 +26,6 @@ export default function DashboardWidget({
     <Card
       sx={{
         py: 5,
-        boxShadow: 'black 0px 16px 23px -16px',
         textAlign: 'center',
         // @ts-expect-error Espero erro aqui pois o typescript não tem como adivinhar qual vai ser a cor
         color: (theme: Theme) => theme.palette[color].dark,
