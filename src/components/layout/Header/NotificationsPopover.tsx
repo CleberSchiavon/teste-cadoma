@@ -144,7 +144,7 @@ export default function NotificationsPopover() {
           <Button
             fullWidth
             disableRipple
-            onClick={() => router.push('/notifications')}
+            onClick={() => router.push('/app/notifications')}
           >
             Ver todas as notificações
           </Button>

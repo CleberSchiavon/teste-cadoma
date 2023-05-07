@@ -29,7 +29,7 @@ export default function DashboardNotifications({
           size='small'
           color='inherit'
           endIcon={<KeyboardArrowRight />}
-          onClick={() => router.push('/notifications')}
+          onClick={() => router.push('/app/notifications')}
         >
           Ver todas as notificações
         </Button>

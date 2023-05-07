@@ -24,7 +24,7 @@ const MENU_OPTIONS = [
   },
   {
     label: 'Instâncias',
-    route: '/instances',
+    route: '/app/instances',
   },
 ];
 
