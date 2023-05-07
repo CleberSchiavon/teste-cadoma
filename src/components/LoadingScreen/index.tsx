@@ -24,8 +24,10 @@ export default function LoadingScreen() {
         justifyContent: 'center',
       }}
     >
-      <Typography variant='h5'>Carregando....</Typography>
-      <Lottie options={lottieOptions} height={200} width={200} />
+      <Typography variant='h5' fontWeight={500} sx={{ marginBottom: 2 }}>
+        Carregando....
+      </Typography>
+      <Lottie options={lottieOptions} width={250} height={200} />
     </div>
   );
 }
