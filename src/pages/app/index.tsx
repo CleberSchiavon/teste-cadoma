@@ -30,6 +30,7 @@ export default function DashboardAppPage() {
                   title={widget.title}
                   total={widget.total}
                   color={widget.color}
+                  route={widget.route}
                   Icon={widget.icon}
                 />
               </Grid>

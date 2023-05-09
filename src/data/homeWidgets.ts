@@ -23,6 +23,7 @@ export const homeWidgets = [
     total: 45,
     color: 'error',
     icon: Notifications,
+    route: '/app/notifications',
   },
   {
     title: 'Tanques desligados',
