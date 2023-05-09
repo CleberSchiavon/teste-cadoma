@@ -1,5 +1,6 @@
 import { Card, SvgIconTypeMap, Theme, Typography } from '@mui/material';
 import { OverridableComponent } from '@mui/material/OverridableComponent';
+import { useRouter } from 'next/router';
 
 import { StyledIcon } from './styled';
 
@@ -11,6 +12,7 @@ interface IDashboardWidget {
     muiName: string;
   };
   color?: string;
+  route?: string;
 }
 
 export default function DashboardWidget({
@@ -19,8 +21,10 @@ export default function DashboardWidget({
   Icon,
   color = 'primary',
   sx,
+  route,
   ...other
 }: IDashboardWidget) {
+  const router = useRouter();
   return (
     <Card
       sx={{
@@ -36,6 +40,8 @@ export default function DashboardWidget({
           `,
         ...sx,
       }}
+      className={route && 'cursor-pointer transition-transform hover:scale-105'}
+      onClick={() => router.push(`${route}`)}
       {...other}
     >
       <StyledIcon>
