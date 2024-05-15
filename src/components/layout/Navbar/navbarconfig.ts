@@ -53,7 +53,7 @@ const navConfig = [
     Icon: EditNote,
   },
   {
-    title: 'Suporte Cadoma',
+    title: 'Suporte',
     path: '/app/suport',
     Icon: Construction,
   },

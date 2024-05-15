@@ -1,4 +1,6 @@
-# Teste Cadoma
+# Front-End Dashboard Example
+
+Esse repositório nasceu de um teste técnico que eu fiz pra uma empresa, no qual eu readequei todo o meu projeto pra estar diposnivel pra todos :)
 
 ## Features
 

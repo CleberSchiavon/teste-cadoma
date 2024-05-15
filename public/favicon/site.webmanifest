@@ -1,6 +1,6 @@
 {
-  "name": "App Cadoma",
-  "short_name": "Cadoma",
+  "name": "Front-End Dashboard Example",
+  "short_name": "Dashboard Example",
   "theme_color": "#ef4444",
   "background_color": "#7f1d1d",
   "display": "standalone"

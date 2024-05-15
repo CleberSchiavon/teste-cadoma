@@ -95,7 +95,7 @@ export default function AccountPopover() {
             Cleber
           </Typography>
           <Typography variant='body2' sx={{ color: 'text.secondary' }} noWrap>
-            cleberteste@cadoma.com.br
+            cleberschiavon@outlook.com
           </Typography>
         </Box>
 

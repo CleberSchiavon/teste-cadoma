@@ -1,10 +1,5 @@
 import { Menu } from '@mui/icons-material/';
 import { Box, IconButton, Stack } from '@mui/material';
-import { useRouter } from 'next/router';
-
-import NextImage from '@/components/NextImage';
-
-import LogoCadoma from '@/../public/images/logo_cadoma.png';
 
 import AccountPopover from './AccountPopover';
 import NotificationsPopover from './NotificationsPopover';
@@ -15,7 +10,6 @@ interface IHeader {
 }
 
 export default function Header({ onOpenNav }: IHeader) {
-  const router = useRouter();
   return (
     <StyledRoot>
       <StyledToolbar>
@@ -28,14 +22,6 @@ export default function Header({ onOpenNav }: IHeader) {
         >
           <Menu />
         </IconButton>
-        <NextImage
-          src={LogoCadoma}
-          alt='Logo da Cadoma'
-          width={250}
-          height={120}
-          onClick={() => router.push('/app')}
-          className='cursor-pointer'
-        />
         <Box sx={{ flexGrow: 1 }} />
 
         <Stack

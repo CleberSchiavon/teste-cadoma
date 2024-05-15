@@ -9,10 +9,7 @@ import Checkbox from '@/components/inputs/Checkbox';
 import OutlinedInput from '@/components/inputs/input';
 import { FormInputsContainer } from '@/components/inputs/styled';
 import Layout from '@/components/layout/Layout';
-import NextImage from '@/components/NextImage';
 import Seo from '@/components/Seo';
-
-import LogoCadoma from '@/../public/images/logo_cadoma.png';
 
 export default function LoginPage() {
   const router = useRouter();
@@ -27,13 +24,6 @@ export default function LoginPage() {
       <main>
         <section className='bg-gray-50 dark:bg-gray-900'>
           <div className='mx-auto flex flex-col items-center justify-center px-6 py-8 md:h-screen lg:py-0'>
-            <NextImage
-              src={LogoCadoma}
-              alt='Logo da Cadoma'
-              width='400'
-              height='200'
-              useSkeleton
-            />
             <div className='w-full rounded-lg bg-white shadow dark:border dark:border-gray-700 dark:bg-gray-800 sm:max-w-md md:mt-0 xl:p-0'>
               <div className='space-y-4 p-6 sm:p-8 md:space-y-6'>
                 <Typography
@@ -50,13 +40,6 @@ export default function LoginPage() {
                   onSubmit={handleSubmit(handleLogin)}
                 >
                   <FormInputsContainer>
-                    <OutlinedInput
-                      name='instance'
-                      labelName='Instância'
-                      id='instance'
-                      placeholder='Instância'
-                      required
-                    />
                     <OutlinedInput
                       name='email'
                       labelName='Email'

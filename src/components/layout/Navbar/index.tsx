@@ -10,10 +10,6 @@ import {
 
 import useResponsive from '@/hooks/useResponsive';
 
-import NextImage from '@/components/NextImage';
-
-import LogoCadoma from '@/../public/images/logo_cadoma.png';
-
 import navConfig from './navbarconfig';
 import NavSection from './NavSection';
 import { StyledAccount } from './styled';
@@ -43,12 +39,6 @@ export default function Navbar({ openNav, onCloseNav }: INavbar) {
       >
         <Menu />
       </IconButton>
-      <NextImage
-        src={LogoCadoma}
-        alt='Logo da Cadoma'
-        width={250}
-        height={120}
-      />
       <Box>
         <Link underline='none'>
           <StyledAccount>
@@ -60,7 +50,7 @@ export default function Navbar({ openNav, onCloseNav }: INavbar) {
               </Typography>
 
               <Typography variant='body2' sx={{ color: 'text.secondary' }}>
-                cleberteste@cadoma.com.br
+                cleberschiavon@outlook.com
               </Typography>
             </Box>
           </StyledAccount>
